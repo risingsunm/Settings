@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/dual_sim_setting_bg">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <!-- CARD1 BACKGROUND -->
+            <ImageView
+                android:id="@+id/card1_bg"
+                android:layout_width="240px"
+                android:layout_height="wrap_content"
+                android:src="@drawable/card_bg" />
+
+            <!-- CARD1 -->
+            <ImageView
+                android:id="@+id/card1"
+                android:layout_width="240px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" />
+
+            <!-- CARD1 FENCE -->
+            <ImageView
+                android:id="@+id/card1_fence"
+                android:layout_width="240px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="140px"
+                android:src="@drawable/en_card1" />
+
+            <!-- CARD2 BACKGROUND -->
+            <ImageView
+                android:id="@+id/card2_bg"
+                android:layout_width="240px"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/card1_bg"
+                android:src="@drawable/card_bg" />
+
+            <!-- CARD2 -->
+            <ImageView
+                android:id="@+id/card2"
+                android:layout_width="240px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/card1_bg" />
+
+            <!-- CARD2 FENCE -->
+            <ImageView
+                android:id="@+id/card2_fence"
+                android:layout_width="240px"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="140px"
+                android:layout_toRightOf="@id/card1_bg"
+                android:src="@drawable/en_card2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- CARD1 SET MAIN CARD -->
+            <TextView
+                android:id="@+id/card1_preferred"
+                android:layout_width="170px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35px"
+                android:layout_marginRight="35px"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:shadowColor="@color/gray"
+                android:shadowDx="-1"
+                android:shadowDy="-1"
+                android:shadowRadius="1"
+                android:textSize="30px"
+                android:text="@string/set_preferred"
+                android:clickable="true"
+                android:background="@drawable/btn_switch_normal" />
+
+            <!-- CARD2 SET MAIN CARD -->
+            <TextView
+                android:id="@+id/card2_preferred"
+                android:layout_width="170px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35px"
+                android:layout_marginRight="35px"
+                android:layout_toRightOf="@id/card1_preferred"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:shadowColor="@color/gray"
+                android:shadowDx="-1"
+                android:shadowDy="-1"
+                android:shadowRadius="1"
+                android:textSize="30px"
+                android:text="@string/set_preferred"
+                android:clickable="true"
+                android:background="@drawable/btn_switch_normal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px" >
+
+            <!-- CARD1 CHECKBOX -->
+            <ImageView
+                android:id="@+id/card1_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38px"
+                />
+
+            <!-- CARD1 NAME -->
+            <TextView
+                android:id="@+id/card1_name"
+                android:layout_width="180px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2px"
+                android:layout_toRightOf="@+id/card1_checkbox"
+                android:gravity="center_horizontal|left"
+                android:singleLine="true"
+                android:textSize="30px"
+                android:clickable="true"
+                />
+
+            <!-- CARD2 CHECKBOX -->
+            <ImageView
+                android:id="@+id/card2_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="280px"
+                />
+
+            <!-- CARD2 NAME -->
+            <TextView
+                android:id="@+id/card2_name"
+                android:layout_width="150px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2px"
+                android:layout_toRightOf="@id/card2_checkbox"
+                android:gravity="center_horizontal|left"
+                android:clickable="true"
+                android:textSize="30px"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px" >
+
+            <!-- CARD1 CHECKBOX -->
+            <TextView
+                android:id="@+id/preferred_describe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38px"
+                android:textSize="30px"
+                android:gravity="center_horizontal|left"
+                android:text="@string/preferred_describe"
+                android:textColor="#ff000000"
+                />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/button_bg" >
+
+                <!-- OK BUTTON -->
+                <TextView
+                    android:id="@+id/ok"
+                    android:layout_width="240px"
+                    android:layout_height="80px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:background="@drawable/button_normal"
+                    android:clickable="true"
+                    android:text="@string/btn_ok" />
+
+                <!-- CANCEL BUTTON -->
+                <TextView
+                    android:id="@+id/cancel"
+                    android:layout_width="240px"
+                    android:layout_height="80px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:background="@drawable/button_normal"
+                    android:clickable="true"
+                    android:text="@string/btn_cancel" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

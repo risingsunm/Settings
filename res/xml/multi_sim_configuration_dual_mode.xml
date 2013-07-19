@@ -1,0 +1,56 @@
+<!-- jiangxiaoke.hoperun 2012.7.12 creare: add CDMA/GSM switch option -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+        <com.android.settings.multisimsettings.MultiSimEnablerForDualMode
+            android:key="sim_enabler_key"
+            android:title="@string/sim_enabler"/>
+
+        <com.android.settings.multisimsettings.MultiSimNamePreference
+            android:key="sim_name_key"
+            android:dialogTitle="@string/sim_naming_title"
+            android:persistent="false"
+            android:singleLine="true"
+            android:maxLength="6"/>
+
+    <PreferenceCategory
+        android:title="@string/mobile_network_setting"
+        android:persistent="false">
+
+        <PreferenceScreen
+            android:key="mobile_network_key"
+            android:title="@string/mobile_network_setting"
+            android:summary="@string/summary_network_settings"
+            android:persistent="false">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.android.settings.multisimsettings.MultiSimSettingTab"/>
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/call_settings"
+        android:persistent="false">
+
+        <PreferenceScreen
+            android:key="call_setting_key"
+            android:title="@string/call_settings"
+            android:summary="@string/summary_call_settings"
+            android:persistent="false">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.android.settings.multisimsettings.MultiSimSettingTab"/>
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="网络选择">
+        <CheckBoxPreference
+            android:key="checkbox_cdma_key"
+            android:title="CDMA"/>
+        <CheckBoxPreference
+            android:key="checkbox_gsm_key"
+            android:title="GSM"/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Begin: mzikun add for saving mode -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:key="savingmode_switch"
+        android:summary="@string/summary_use_saving_mode"
+        android:title="@string/use_saving_mode" />
+
+    <ListPreference
+        android:dependency="savingmode_switch"
+        android:dialogTitle="@string/battery_set"
+        android:entries="@array/battery_level"
+        android:entryValues="@array/battery_level_values"
+        android:key="battery_set"
+        android:title="@string/battery_set" />
+
+    <PreferenceCategory android:title="@string/save_mode_settings" >
+        <CheckBoxPreference
+            android:dependency="savingmode_switch"
+            android:key="wlan_set"
+            android:summary="@string/wlan_set_summary"
+            android:title="@string/wlan_set" />
+        <CheckBoxPreference
+            android:dependency="savingmode_switch"
+            android:key="bluetooth_set"
+            android:summary="@string/bluetooth_set_summary"
+            android:title="@string/bluetooth_set" />
+        <CheckBoxPreference
+            android:dependency="savingmode_switch"
+            android:key="gps_set"
+            android:summary="@string/gps_set_summary"
+            android:title="@string/gps_set" />
+        <CheckBoxPreference
+            android:dependency="savingmode_switch"
+            android:key="sync_set"
+            android:summary="@string/sync_set_summary"
+            android:title="@string/sync_set" />
+        <CheckBoxPreference
+            android:dependency="savingmode_switch"
+            android:key="brightness_set"
+            android:summary="@string/brightness_set_summary"
+            android:title="@string/brightness_set" />
+
+        <ListPreference
+            android:dependency="brightness_set"
+            android:dialogTitle="@string/brightness_detail"
+            android:entries="@array/brightness_entries"
+            android:entryValues="@array/brightness_values"
+            android:key="brightness_detail"
+            android:title="@string/brightness_detail" />
+        <ListPreference
+            android:dependency="savingmode_switch"
+            android:dialogTitle="@string/screen_timeout"
+            android:entries="@array/screentimeout_entries"
+            android:entryValues="@array/screentimeout_values"
+            android:key="screen_timeout"
+            android:summary="@string/screen_timeout_summary"
+            android:title="@string/screen_timeout" />
+    </PreferenceCategory>
+
+    <PreferenceScreen
+        android:key="PowerSavingTips"
+        android:title="@string/powersavingtips" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.PowerSavingTips"
+            android:targetPackage="com.android.settings" />
+    </PreferenceScreen>
+
+</PreferenceScreen>
+<!-- End: mzikun add for saving mode -->
